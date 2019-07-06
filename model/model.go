@@ -1,22 +1,24 @@
 package model
 
 import (
-	"time"
+	"github.com/jinzhu/gorm"
 )
 
+// Config Exported
 type Config struct {
 	ElasticSearchUrl string `env:"ELASTICSEARCH_URL" envDefault:"Slomek"`
 }
 
+// Message Exported
 type Message struct {
-	ID        string    `json:"_id,omitempty"`
-	Text      string    `json:"text"`
-	CreatedAt time.Time `json:"createdAt"`
-	User      User      `json:"user"`
+	gorm.Model
+	Text string `json:"text"`
+	User User   `json:"user"`
 }
 
+// User Exported
 type User struct {
-	ID     int    `json:"_id,omitempty"`
+	gorm.Model
 	Name   string `json:"name"`
 	Avatar string `json:"avatar"`
 }
