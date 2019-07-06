@@ -14,10 +14,12 @@ const (
 	appName   = "back-end"
 )
 
+// ElasticService Exported
 type ElasticService struct {
 	ElasticCLI *elastic.Client
 }
 
+// SaveToElastic Exported
 func (e *ElasticService) SaveToElastic(ctx context.Context, payload model.Message) error {
 
 	exists, err := e.ElasticCLI.IndexExists(indexName).Do(ctx)
@@ -41,9 +43,8 @@ func (e *ElasticService) SaveToElastic(ctx context.Context, payload model.Messag
 	}
 
 	var message = model.Message{
-		Text:      payload.Text,
-		CreatedAt: payload.CreatedAt,
-		User:      user,
+		Text: payload.Text,
+		User: user,
 	}
 
 	_, error := e.ElasticCLI.Index().
