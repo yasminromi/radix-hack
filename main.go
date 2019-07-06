@@ -44,8 +44,7 @@ func main() {
 	fs := http.FileServer(http.Dir("../public"))
 	http.Handle("/", fs)
 	http.HandleFunc("/ws", chatHandler.HandleConnections)
-	http.HandleFunc("/createTicket", chatHandler.CreateViaPost)
-	http.HandleFunc("/updateTicket", chatHandler.UpdateViaPost)
+	http.HandleFunc("/sendMessage", chatHandler.SendViaPost)
 
 	go chatHandler.HandleMessages()
 

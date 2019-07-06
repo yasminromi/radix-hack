@@ -8,5 +8,5 @@ commit-deploy:
 	git add --all
 	git commit -am '$(COMMIT_MSG)'
 	git push
-	git remote add heroku 
+	git push heroku master 
 
