@@ -22,7 +22,7 @@ func main() {
 
 	elasticClient, err := elastic.NewClient(elastic.SetURL(os.Getenv("BONSAI_URL")), elastic.SetSniff(false))
 	if err != nil {
-		log.Fatal("Error Creating Elastic Client: ", err)
+		log.Fatal("Error Creating Elastic Client:  ", err)
 	}
 
 	log.Printf("Elastic Search Client Created")
