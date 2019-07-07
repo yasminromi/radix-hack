@@ -39,7 +39,7 @@ func (e *ElasticService) SaveToElastic(ctx context.Context, payload model.Messag
 
 	var user = model.User{
 		Name:   payload.User.Name,
-		Avatar: payload.User.Avatar,
+		Msisdn: payload.User.Msisdn,
 	}
 
 	var message = model.Message{
