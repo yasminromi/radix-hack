@@ -2,74 +2,111 @@
 
 
 [[projects]]
+  digest = "1:89222a85b884e2ab26ed316b4e2a186cd5068800b1c6e7c58573e69bd4f3c2a8"
   name = "github.com/caarlos0/env"
   packages = ["."]
+  pruneopts = ""
   revision = "4bd75bf16b9ef8c1383109b5e4d931bd72c3b6d0"
   version = "v6.0.0"
 
 [[projects]]
+  digest = "1:c2db84082861ca42d0b00580d28f4b31aceec477a00a38e1a057fb3da75c8adc"
   name = "github.com/go-redis/redis"
-  packages = [".","internal","internal/consistenthash","internal/hashtag","internal/pool","internal/proto","internal/util"]
+  packages = [
+    ".",
+    "internal",
+    "internal/consistenthash",
+    "internal/hashtag",
+    "internal/pool",
+    "internal/proto",
+    "internal/util",
+  ]
+  pruneopts = ""
   revision = "75795aa4236dc7341eefac3bbe945e68c99ef9df"
   version = "v6.15.3"
 
 [[projects]]
+  digest = "1:09aa5dd1332b93c96bde671bafb053249dc813febf7d5ca84e8f382ba255d67d"
   name = "github.com/gorilla/websocket"
   packages = ["."]
+  pruneopts = ""
   revision = "66b9c49e59c6c48f0ffce28c2d8b8a5678502c6d"
   version = "v1.4.0"
 
 [[projects]]
+  digest = "1:3755c1a3de6404d58d7767562d00a84ee4a507df69a1490c9cebb931d7b11b96"
   name = "github.com/jinzhu/gorm"
   packages = ["."]
+  pruneopts = ""
   revision = "836fb2c19d84dac7b0272958dfb9af7cf0d0ade4"
   version = "v1.9.10"
 
 [[projects]]
+  digest = "1:a7b97371fb9af808b6a4fcc6693276ef7869bb1f282c3c87038c6c7e74ef4ae6"
   name = "github.com/jinzhu/inflection"
   packages = ["."]
+  pruneopts = ""
   revision = "f5c5f50e6090ae76a29240b61ae2a90dd810112e"
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:7df5a9695a743c3e1626b28bb8741602c8c15527e1efaeaec48ab2ff9a23f74c"
   name = "github.com/joho/godotenv"
   packages = ["."]
+  pruneopts = ""
   revision = "23d116af351c84513e1946b527c88823e476be13"
   version = "v1.3.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:101e8200d89dcff2cec2522e427298045bea6d81ef71f8fe10810faeae741efc"
   name = "github.com/mailru/easyjson"
-  packages = [".","buffer","jlexer","jwriter"]
+  packages = [
+    ".",
+    "buffer",
+    "jlexer",
+    "jwriter",
+  ]
+  pruneopts = ""
   revision = "b2ccc519800e761ac8000b95e5d57c80a897ff9e"
 
 [[projects]]
+  digest = "1:ff9c3b6184aff39be9f288558c54dfd18d6a7810ac938edf3da43f71757d0616"
   name = "github.com/olivere/elastic"
-  packages = ["config","uritemplates"]
+  packages = [
+    "config",
+    "uritemplates",
+  ]
+  pruneopts = ""
   revision = "5062f56d636572a953ca37c3a359eaf0472473b6"
   version = "v7.0.4"
 
 [[projects]]
+  digest = "1:1d7e1867c49a6dd9856598ef7c3123604ea3daabf5b83f303ff457bcbc410b1d"
   name = "github.com/pkg/errors"
   packages = ["."]
+  pruneopts = ""
   revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
   version = "v0.8.1"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/yasminromi/radix-hack"
-  packages = ["handler","model","service"]
-  revision = "213c3d9168a5ade81796759d2bab5f2d18a907ed"
-
-[[projects]]
+  digest = "1:aadf45babee88876f78829bac7d56936e8bd7495f349b61255c9709113c68dd3"
   name = "gopkg.in/olivere/elastic.v6"
   packages = ["."]
+  pruneopts = ""
   revision = "2ce6dee3af14e17dc059746a1de4f983169030e9"
   version = "v6.2.21"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "55714684543c91b7d9dcc6bcd0e04f981ef9ea85e17f6e9bb535a3819b40365d"
+  input-imports = [
+    "github.com/caarlos0/env",
+    "github.com/go-redis/redis",
+    "github.com/gorilla/websocket",
+    "github.com/jinzhu/gorm",
+    "github.com/joho/godotenv",
+    "gopkg.in/olivere/elastic.v6",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
