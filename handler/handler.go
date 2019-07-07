@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"radix-hack/model"
-	"radix-hack/service"
+	"github.com/yasminromi/radix-hack/model"
+	"github.com/yasminromi/radix-hack/service"
 
 	"github.com/gorilla/websocket"
 )
@@ -14,11 +14,13 @@ import (
 var clients = make(map[*websocket.Conn]bool)
 var broadcast = make(chan model.Message)
 
+// Handler Exported
 type Handler struct {
 	Upgrader websocket.Upgrader
 	Service  *service.ElasticService
 }
 
+// SendViaPost Exported
 func (h *Handler) SendViaPost(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == "POST" {
@@ -49,6 +51,7 @@ func (h *Handler) SendViaPost(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// HandleConnections Exported
 func (h *Handler) HandleConnections(w http.ResponseWriter, r *http.Request) {
 
 	ws, err := h.Upgrader.Upgrade(w, r, nil)
@@ -85,6 +88,7 @@ func (h *Handler) HandleConnections(w http.ResponseWriter, r *http.Request) {
 
 }
 
+// HandleMessages Exported
 func (h *Handler) HandleMessages() {
 	for {
 

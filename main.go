@@ -5,9 +5,10 @@ import (
 	"net/http"
 	"os"
 
-	"radix-hack/handler"
-	"radix-hack/model"
-	"radix-hack/service"
+	"github.com/yasminromi/radix-hack/service"
+
+	"github.com/yasminromi/radix-hack/handler"
+	"github.com/yasminromi/radix-hack/model"
 
 	"github.com/caarlos0/env"
 	"github.com/gorilla/websocket"

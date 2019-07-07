@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"radix-hack/model"
+	"github.com/yasminromi/radix-hack/model"
 
 	"gopkg.in/olivere/elastic.v6"
 )
@@ -34,7 +34,7 @@ func (e *ElasticService) SaveToElastic(ctx context.Context, payload model.Messag
 			return error
 		}
 		if !res.Acknowledged {
-			return errors.New("CreateIndex was not acknowledged. Check that timeout value is correct.")
+			return errors.New("CreateIndex was not acknowledged. Check that timeout value is correct")
 		}
 	}
 
