@@ -9,18 +9,18 @@ type Config struct {
 	ElasticSearchUrl string `env:"ELASTICSEARCH_URL" envDefault:"Slomek"`
 }
 
-// Ticket data 
-Cache struct {
+// Ticket data
+type Cache struct {
 	URL string `env:"REDIS_URL" envDefault:"Slomek"`
 }
 
 // Message Exported
 type Message struct {
 	gorm.Model
-	Category string `json:"category"`
-	Call []string `json:"call"`
-	Text string `json:"text"`
-	User User   `json:"user"`
+	Category string   `json:"category"`
+	Call     []string `json:"call"`
+	Text     string   `json:"text"`
+	User     User     `json:"user"`
 }
 
 // User Exported
