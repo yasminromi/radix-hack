@@ -4,19 +4,18 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"radix-hack/service"
 
 	"github.com/caarlos0/env"
 	"github.com/gorilla/websocket"
 	"github.com/joho/godotenv"
 	"github.com/yasminromi/radix-hack/handler"
 	"github.com/yasminromi/radix-hack/model"
+	"github.com/yasminromi/radix-hack/service"
 	"gopkg.in/olivere/elastic.v6"
 )
 
 func main() {
 
-	service.ConnectToRedis()
 	if err := godotenv.Load(); err != nil {
 		log.Println("File .env not found, reading configuration from ENV")
 	}
