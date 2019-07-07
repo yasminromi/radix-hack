@@ -4,16 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-// Config Exported
-type Config struct {
-	ElasticSearchUrl string `env:"BONSAI_URL" envDefault:"Slomek"`
-}
-
-// Ticket data
-type Cache struct {
-	URL string `env:"REDISCLOUD_URL" envDefault:"Slomek"`
-}
-
 // Message Exported
 type Message struct {
 	gorm.Model

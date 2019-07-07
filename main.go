@@ -8,9 +8,7 @@ import (
 	"github.com/yasminromi/radix-hack/service"
 
 	"github.com/yasminromi/radix-hack/handler"
-	"github.com/yasminromi/radix-hack/model"
 
-	"github.com/caarlos0/env"
 	"github.com/gorilla/websocket"
 	"github.com/joho/godotenv"
 	"gopkg.in/olivere/elastic.v6"
@@ -22,12 +20,7 @@ func main() {
 		log.Println("File .env not found, reading configuration from ENV")
 	}
 
-	var cfg model.Config
-	if err := env.Parse(&cfg); err != nil {
-		log.Fatalln("Failed to parse ENV")
-	}
-
-	elasticClient, err := elastic.NewClient(elastic.SetURL(cfg.ElasticSearchUrl), elastic.SetSniff(false))
+	elasticClient, err := elastic.NewClient(elastic.SetURL(os.Getenv("BONSAI_URL")), elastic.SetSniff(false))
 	if err != nil {
 		log.Fatal("Error Creating Elastic Client: ", err)
 	}
