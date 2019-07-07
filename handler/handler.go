@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/yasminromi/radix-hack/model"
 	"github.com/yasminromi/radix-hack/service"
@@ -23,8 +22,6 @@ type Handler struct {
 
 // SendViaPost Exported
 func (h *Handler) SendViaPost(w http.ResponseWriter, r *http.Request) {
-
-	log.Printf(os.Getenv("PORT"))
 
 	if r.Method == "POST" {
 
