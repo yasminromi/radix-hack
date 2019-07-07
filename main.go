@@ -5,12 +5,13 @@ import (
 	"net/http"
 	"os"
 
+	"radix-hack/handler"
+	"radix-hack/model"
+	"radix-hack/service"
+
 	"github.com/caarlos0/env"
 	"github.com/gorilla/websocket"
 	"github.com/joho/godotenv"
-	"github.com/yasminromi/radix-hack/handler"
-	"github.com/yasminromi/radix-hack/model"
-	"github.com/yasminromi/radix-hack/service"
 	"gopkg.in/olivere/elastic.v6"
 )
 
@@ -38,7 +39,7 @@ func main() {
 
 	chatHandler := &handler.Handler{
 		Upgrader: websocket.Upgrader{},
-		Service:  elasticService,
+		Service:  *elasticService,
 	}
 
 	fs := http.FileServer(http.Dir("../public"))

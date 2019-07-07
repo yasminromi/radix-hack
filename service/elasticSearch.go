@@ -4,7 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/yasminromi/radix-hack/model"
+	"radix-hack/model"
+
 	"gopkg.in/olivere/elastic.v6"
 )
 

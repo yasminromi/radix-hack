@@ -5,9 +5,10 @@ import (
 	"log"
 	"net/http"
 
+	"radix-hack/model"
+	"radix-hack/service"
+
 	"github.com/gorilla/websocket"
-	"github.com/yasminromi/radix-hack/model"
-	"github.com/yasminromi/radix-hack/service"
 )
 
 var clients = make(map[*websocket.Conn]bool)
