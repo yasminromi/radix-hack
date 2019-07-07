@@ -6,12 +6,12 @@ import (
 
 // Config Exported
 type Config struct {
-	ElasticSearchUrl string `env:"ELASTICSEARCH_URL" envDefault:"Slomek"`
+	ElasticSearchUrl string `env:"BONSAI_URL" envDefault:"Slomek"`
 }
 
 // Ticket data
 type Cache struct {
-	URL string `env:"REDIS_URL" envDefault:"Slomek"`
+	URL string `env:"REDISCLOUD_URL" envDefault:"Slomek"`
 }
 
 // Message Exported
