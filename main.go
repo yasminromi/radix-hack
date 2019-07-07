@@ -33,7 +33,7 @@ func main() {
 
 	chatHandler := &handler.Handler{
 		Upgrader: websocket.Upgrader{},
-		Service:  elasticService,
+		Service:  *elasticService,
 	}
 
 	fs := http.FileServer(http.Dir("../public"))
