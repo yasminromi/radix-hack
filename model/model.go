@@ -9,9 +9,16 @@ type Config struct {
 	ElasticSearchUrl string `env:"ELASTICSEARCH_URL" envDefault:"Slomek"`
 }
 
+// Ticket data 
+Cache struct {
+	URL string `env:"REDIS_URL" envDefault:"Slomek"`
+}
+
 // Message Exported
 type Message struct {
 	gorm.Model
+	Category string `json:"category"`
+	Call []string `json:"call"`
 	Text string `json:"text"`
 	User User   `json:"user"`
 }
@@ -20,5 +27,5 @@ type Message struct {
 type User struct {
 	gorm.Model
 	Name   string `json:"name"`
-	Avatar string `json:"avatar"`
+	Msisdn string `json:"msisdn"`
 }

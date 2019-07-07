@@ -100,3 +100,23 @@ func (h *Handler) HandleMessages() {
 		}
 	}
 }
+
+//func (i18n *I18n) GetTranslation(language, group, key string) (string, error) {
+
+//	applicationId := "35"
+//	group = language + "." + group
+//	cacheKey := applicationId + group + key
+//	value, _ := i18n.Cache.Get(cacheKey)
+
+//	if value == "" {
+//		valueFromMetadata, err := client.GetMetadataValue(applicationId, group, key)
+//
+//		if err != nil {
+//			return "", err
+//		}
+//
+//		i18n.Cache.Set(cacheKey, value, 30 * time.Minute)
+//		value = valueFromMetadata
+//	}
+//	return value, nil
+//}
